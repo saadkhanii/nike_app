@@ -10,7 +10,7 @@ class ShoeTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 25,right: 20),
+      margin: EdgeInsets.only(left: 20,right: 20),
       width: 300,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(12)),
@@ -18,7 +18,10 @@ class ShoeTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // shoe image
-          Image.asset(shoe.imagePath),
+          Padding(
+            padding: const EdgeInsets.only(left: 20,right: 20),
+            child: Image.asset(shoe.imagePath),
+          ),
 
           // shoe discription
           Padding(
@@ -27,15 +30,18 @@ class ShoeTile extends StatelessWidget {
                 shoe.discription,
                 trimLines: 2,
                 trimMode: TrimMode.Line,
-                style: TextStyle(color: Colors.black54),
+                style:const TextStyle(color: Colors.black54),
               )),
+
+          // Row for name,price and add button
           Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+            padding: const EdgeInsets.only(left: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // shoe name
@@ -44,12 +50,10 @@ class ShoeTile extends StatelessWidget {
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                     ),
-                    const SizedBox(
-                      height: 5,
-                    ),
+
                     // shoe price
                     Text(
-                      'Rs:' + shoe.price,
+                      'Rs: ' + shoe.price,
                       style: TextStyle(color: Colors.black54),
                     ),
                   ],

@@ -26,7 +26,7 @@ class Cart extends ChangeNotifier {
             'Growing anything takes serious work—work that builds expectations. And there\'s no greater pressure than your own expectations.'
             ' But if you\'re anything like Jayson, it\'s always worth tending to the things you love: your family, your game, your legacy.'),
     Shoe(
-        name: 'Nike Air Max 270',
+        name: 'Nike Air Max',
         price: '44999',
         imagePath: 'images/sho_4.png',
         discription:

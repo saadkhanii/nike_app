@@ -58,12 +58,12 @@ class _HomePageState extends State<HomePage> {
             Column(
               children: [
                 DrawerHeader(
-                  margin: EdgeInsets.zero,
+                    margin: EdgeInsets.zero,
                     child: Image.asset(
-                  'images/nike.png',
-                  height: 200,
-                  width: 200,
-                )),
+                      'images/nike.png',
+                      height: 200,
+                      width: 200,
+                    )),
                 const Padding(
                   padding: EdgeInsets.only(left: 25.0),
                   child: ListTile(
@@ -86,6 +86,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+
+            // log out
             const Padding(
               padding: EdgeInsets.only(left: 25.0, bottom: 25),
               child: ListTile(

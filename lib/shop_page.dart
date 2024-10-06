@@ -22,6 +22,7 @@ class _ShopPageState extends State<ShopPage> {
               content: Text('Check your cart!'),
             ));
   }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
@@ -29,9 +30,13 @@ class _ShopPageState extends State<ShopPage> {
               backgroundColor: Colors.blue.shade200,
               body: Column(
                 children: [
+
+                  // search bar
                   Container(
-                      padding: EdgeInsets.all(12),
-                      margin: EdgeInsets.symmetric(horizontal: 25),
+                      padding:const EdgeInsets.all(12),
+                      margin:const EdgeInsets.symmetric(
+                        horizontal: 25,
+                      ),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(100)),
@@ -39,6 +44,8 @@ class _ShopPageState extends State<ShopPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [Text('Search'), Icon(Icons.search)],
                       )),
+
+                  // slogan
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 25.0),
                     child: Text(
@@ -46,6 +53,8 @@ class _ShopPageState extends State<ShopPage> {
                       style: TextStyle(color: Colors.black54),
                     ),
                   ),
+
+                  // hot picks title
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 25.0),
                     child: Row(
@@ -64,8 +73,11 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 10,
                   ),
+
+                  // ** ListView for shoes **
                   Expanded(
                     child: ListView.builder(
+                      padding:const EdgeInsets.only(left: 10,right: 10,),
                         itemCount: 4,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
@@ -79,7 +91,7 @@ class _ShopPageState extends State<ShopPage> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsets.only(top: 40.0, left: 25, right: 25),
+                        const EdgeInsets.only(top: 25.0,),
                     child: Divider(
                       color: Colors.blue.shade200,
                     ),
